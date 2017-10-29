@@ -45,6 +45,24 @@ var player = {
   }
 };
 
+Boulder = function(color)
+{
+  var x = Math.floor(Math.random() * 49) * 10;
+  var y = 0;
+  this.hitbox = new Rectangle(x, y, 10, 10);
+  this.color = color;
+
+  this.draw = function()
+  {
+    this.hitbox.draw(ctx, this.color);
+  }
+
+  this.erase = function()
+  {
+    clearRect(ctx, this.hitbox);
+  }
+}
+
 document.body.onload = function()
 {
   player.draw();

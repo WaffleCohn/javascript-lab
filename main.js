@@ -11,3 +11,8 @@ var player = {
     this.hitbox.draw(ctx, this.color);
   }
 };
+
+document.body.onload = function()
+{
+  player.draw();
+};

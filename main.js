@@ -22,6 +22,26 @@ var player = {
     {
       this.body[i].draw(ctx, this.color, this.hitbox);
     }
+  },
+  erase: function()
+  {
+    clearRect(ctx, this.hitbox);
+  },
+  moveLeft: function()
+  {
+    this.erase();
+    this.hitbox.x -= 10;
+    if (this.hitbox.x < 0)
+      this.hitbox.x = 0;
+    this.draw();
+  },
+  moveRight: function()
+  {
+    this.erase();
+    this.hitbox.x += 10;
+    if (this.hitbox.x > canvas.width - this.hitbox.width)
+      this.hitbox.x = canvas.width - this.hitbox.width;
+    this.draw();
   }
 };
 

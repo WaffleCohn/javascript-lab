@@ -4,7 +4,8 @@ var scoreBoard = document.getElementById("score"),
     ctx = canvas.getContext("2d");
 
 var boulderCount = 15,
-    boulders = [];
+    boulders = [],
+    fallInterval = null;
 
 var player = {
   body: [
@@ -66,6 +67,23 @@ Boulder = function(color)
   }
 }
 
+function fall()
+{
+  for (var i = 0; i < boulders.length; i++)
+  {
+    var boulder = boulders[i];
+    boulder.erase();
+    boulder.hitbox.y += 10;
+
+    if (boulder.hitbox.y >= canvas.height)
+    {
+      boulders[i] = new Boulder("brown");
+    }
+
+    boulder.draw();
+  }
+}
+
 function start()
 {
   startButton.onclick = null;
@@ -82,6 +100,8 @@ function start()
       k++;
     }
   }, 900);
+
+  fallInterval = setInterval(fall, 40);
 }
 
 document.body.onload = function()

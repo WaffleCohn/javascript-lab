@@ -48,4 +48,9 @@ var player = {
 document.body.onload = function()
 {
   player.draw();
+  document.body.onkeydown = function(e) {
+    var keyCode = e.which || e.keyCode;
+    if (keyCode == 37) player.moveLeft();
+    else if (keyCode == 39) player.moveRight();
+  };
 };

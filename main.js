@@ -3,6 +3,9 @@ var scoreBoard = document.getElementById("score"),
     canvas = document.getElementById("game"),
     ctx = canvas.getContext("2d");
 
+var boulderCount = 15,
+    boulders = [];
+
 var player = {
   body: [
     new Rectangle(0, 0, 30, 10),
@@ -63,6 +66,24 @@ Boulder = function(color)
   }
 }
 
+function start()
+{
+  startButton.onclick = null;
+
+  var k = 0;
+  var boulderInterval = setInterval(function() {
+    if (k == boulderCount)
+    {
+      clearInterval(boulderInterval);
+    }
+    else
+    {
+      boulders[k] = new Boulder("brown");
+      k++;
+    }
+  }, 900);
+}
+
 document.body.onload = function()
 {
   player.draw();
@@ -71,4 +92,6 @@ document.body.onload = function()
     if (keyCode == 37) player.moveLeft();
     else if (keyCode == 39) player.moveRight();
   };
+
+  startButton.onclick = start;
 };

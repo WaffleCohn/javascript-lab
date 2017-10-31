@@ -1,12 +1,12 @@
 # JavaScript Lab
 The purpose of this lab to practice using JavaScript to create an interactive webpage and introduce new features of the language.
 ## Overview
-In this lab, we will be creating a website for playing the game "Falling Boulders." The goal of this game is to move your player across the bottom of the screen using the left and right arrow keys to avoid constantly falling boulders. Every boulder that is successfully dodged earns the player a point. The game ends when the player collides with one of the boulders.
+In this lab, we will be creating a website for playing the game "Falling Boulders." The goal of this game is to move your player across the bottom of the screen using the left and right arrow keys to avoid constantly falling boulders. Every boulder that is successfully dodged earns the player a point. The game ends when the player collides with one of the boulders. You can play a finished demo of the game __[here][game-demo]__.
 ## Step 1: Initial Code
 
 __[download starter code][starter-code]__, __[diff for this step][diff-1]__, __[code for this step][step-1]__
 
-To start off, you are going to need to download the starter code. This includes an html file (`index.html`) with the layout of the page already set up and a JavaScript file (`framework.js`) with some pre-written code that takes care of some behind-the-scenes work we don't want to have to worry about while coding the game itself.
+To start off, you are going to need to download the starter code, which you can download __[here][starter-code]__. This includes an html file (`index.html`) with the layout of the page already set up and a JavaScript file (`framework.js`) with some pre-written code that takes care of some behind-the-scenes work we don't want to have to worry about while coding the game itself.
 
 Once you have that downloaded, go ahead and create a new file called `main.js` and add a reference to it with the `<script>` tag at the bottom of `index.html`. If you don't know how to do this, look at the tag loading `framework.js` for reference.
 
@@ -184,7 +184,9 @@ Now that we have `updateScore` and `checkHit`, let's put them inside `fall`. At 
 
 Congratulations, you've finished your first game in JavaScript!
 
-[starter-code]:
+[game-demo]: https://wafflecohn.github.io/javascript-lab/
+
+[starter-code]: https://wafflecohn.github.io/javascript-lab/starter-code.zip
 
 [diff-1]: https://github.com/WaffleCohn/javascript-lab/commit/427829f46feb493cd3b11839c58c8c53c3ea250c
 [step-1]: https://github.com/WaffleCohn/javascript-lab/blob/427829f46feb493cd3b11839c58c8c53c3ea250c/index.html
